@@ -11,14 +11,7 @@ public class Solution {
     public Boolean test(int i) {
         Method[] methods = this.getClass().getDeclaredMethods();
         Method m = methods[0];
-
         System.out.println(m.getName());
-
-        Parameter[] parameters = m.getParameters();
-        for (Parameter p:parameters) {
-            Type t = p.getType();
-            System.out.println(p.getName() + " " + p.getType());
-        }
 
         try {
             ArrayList<Object> ar = (ArrayList<Object>) intputs.get(i);
