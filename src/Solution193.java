@@ -1,14 +1,33 @@
-public class Solution193 {
-    public static String testIn = "(()";
-    public static int testOut = 2;
-    public static String testIn2 = ")()())";
-    public static int testOut2 = 4;
-    public static String testIn3 = "()(())";
-    public static int testOut3 = 6;
-    public static String testIn4 = "((()))())";
-    public static int testOut4 = 8;
-    public static String testIn5 = ")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())";
-    public static int testOut5 = 132;
+import java.util.ArrayList;
+
+public class Solution193 extends Solution {
+
+    public Solution193() {
+        intputs = new ArrayList<Object>() {{
+            add(new ArrayList<Object>() {{
+                add("(()");
+            }});
+            add(new ArrayList<Object>() {{
+                add(")()())");
+            }});
+            add(new ArrayList<Object>() {{
+                add("()(())");
+            }});
+            add(new ArrayList<Object>() {{
+                add("((()))())");
+            }});
+            add(new ArrayList<Object>() {{
+                add(")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())");
+            }});
+        }};
+        outputs = new ArrayList<Integer>() {{
+            add(2);
+            add(4);
+            add(6);
+            add(8);
+            add(132);
+        }};
+    }
 
     public int longestValidParentheses(String s) {
         int len = s.length();
