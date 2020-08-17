@@ -3,25 +3,25 @@ import java.util.*;
 public class Solution122 extends Solution{
 
     public Solution122() {
-        intputs = new ArrayList<Object>() {{
-            add(new ArrayList<Object>() {{
+        intputs = new ArrayList<>() {{
+            add(new ArrayList<>() {{
                 add(new int[]{2,1,5,6,2,3});
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(new int[]{2, 1, 5, 6, 2, 3});
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(new int[]{5, 4, 1, 2});
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(new int[]{0, 1});
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(new int[]{2, 1, 5, 6, 2, 3});
             }});
         }};
 
-        outputs = new ArrayList<Integer>();
+        outputs = new ArrayList<>();
         outputs.add(10);
         outputs.add(10);
         outputs.add(8);

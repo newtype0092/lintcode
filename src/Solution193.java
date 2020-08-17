@@ -3,24 +3,24 @@ import java.util.ArrayList;
 public class Solution193 extends Solution {
 
     public Solution193() {
-        intputs = new ArrayList<Object>() {{
-            add(new ArrayList<Object>() {{
+        intputs = new ArrayList<>() {{
+            add(new ArrayList<>() {{
                 add("(()");
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(")()())");
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add("()(())");
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add("((()))())");
             }});
-            add(new ArrayList<Object>() {{
+            add(new ArrayList<>() {{
                 add(")(()(()(((())(((((()()))((((()()(()()())())())()))()()()())(())()()(((()))))()((()))(((())()((()()())((())))(())))())((()())()()((()((())))))((()(((((()((()))(()()(())))((()))()))())");
             }});
         }};
-        outputs = new ArrayList<Integer>() {{
+        outputs = new ArrayList<>() {{
             add(2);
             add(4);
             add(6);
