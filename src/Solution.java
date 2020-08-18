@@ -1,5 +1,6 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 
 public class Solution {
@@ -8,8 +9,16 @@ public class Solution {
 
     public Boolean test(int i) {
         Method[] methods = this.getClass().getDeclaredMethods();
-        Method m = methods[0];
-        System.out.println(m.getName());
+        Method m = null;
+        for(Method method : methods) {
+            if (Modifier.toString(method.getModifiers()).equals("public")) {
+                m = method;
+            }
+        }
+        if (m == null) {
+            System.out.println("no public method!");
+            return false;
+        }
 
         try {
             ArrayList<Object> ar = (ArrayList<Object>) intputs.get(i);
